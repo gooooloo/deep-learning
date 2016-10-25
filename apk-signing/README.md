@@ -4,9 +4,8 @@ Android apk的签名
 # apk签名的目的
 
 众所周知，apk需要签名。但是如 https://developer.android.com/guide/topics/security/permissions.html 所说，开发者可以自己给apk签名，并不需要权威机构的认证。因为该签名的作用是用于区分2个apk是否是来自与相同的开发者，而不是用于鉴别是否来自于它所声明的开发者。这2者自然是很不同的，前者要弱很多。
-```
-All APKs (.apk files) must be signed with a certificate whose private key is held by their developer. This certificate identifies the author of the application. The certificate does not need to be signed by a certificate authority; it is perfectly allowable, and typical, for Android applications to use self-signed certificates. The purpose of certificates in Android is to distinguish application authors. This allows the system to grant or deny applications access to signature-level permissions and to grant or deny an application's request to be given the same Linux identity as another application.
-```
+
+> All APKs (.apk files) must be signed with a certificate whose private key is held by their developer. This certificate identifies the author of the application. The certificate does not need to be signed by a certificate authority; it is perfectly allowable, and typical, for Android applications to use self-signed certificates. The purpose of certificates in Android is to distinguish application authors. This allows the system to grant or deny applications access to signature-level permissions and to grant or deny an application's request to be given the same Linux identity as another application.
 
 也就是说，相同的包，如果你先装了一个假冒开发者签名的apk，那么再装真正开发者签名的apk，是装不上的；而Android系统并不知道第一个装的是假冒的。
 
